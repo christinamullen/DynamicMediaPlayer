@@ -40,7 +40,8 @@ body {
 
 @media screen and (min-width: 600px) {
     .container {
-        grid-template-rows: repeat(12, 1fr);
+        justify-items: center;
+        grid-template-columns: repeat(12, 1fr);
         grid-template-rows: auto;
     }
     .top {
@@ -48,13 +49,6 @@ body {
         grid-column: 1 / span 12;
         justify-items: center;
     
-    }
-    .middle {
-        margin: auto;
-        display: grid;
-        grid-column: 1 / span 12;
-        justify-items: center;
-        
     }
     .left {
         background-color: red;
