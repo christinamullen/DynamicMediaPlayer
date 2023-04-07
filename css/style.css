@@ -36,6 +36,8 @@ body {
     box-sizing: border-box;
     place-items: center;
     box-shadow: var(--shadow);
+    border-radius: 20px;
+    text-align: center;
 }
 
 
