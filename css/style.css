@@ -39,7 +39,10 @@ body {
     border-radius: 20px;
     text-align: center;
 }
-
+video {
+    width: 250px;
+    height: 440px;
+}
 
 @media screen and (min-width: 600px) {
     .container {
@@ -54,7 +57,7 @@ body {
     
     }
     .left {
-        background-color: red;
+        background-color: #FEE9C4;
         grid-column: 1 / span 6;
         justify-items: center;
     
