@@ -29,7 +29,12 @@
                 <h2> alla Nonna Pia</h2>
             </div>
 
-            <div class="left"><video src="/vids/NonnaPiasDeliciousStuffedpeppers.mp4" ></video>
+            <div class="left">
+                <video id="vid" width="300" controls>
+                    <source src="vids/NonnaPiasDeliciousStuffedpeppers.mp4" type="video/mp4">
+                    <source src="vids/NonnaPiasDeliciousStuffedpeppers.webm" type="video/webm">
+                    <track id="en" kind="captions" label="English (captions)" srclang="en" src="captions/NonnaPiasDeliciousStuffedpeppers.vtt" default>
+                </video>
                 <div id="controls">
                     <form id="video_form">
                         <fieldset>
@@ -60,8 +65,14 @@
                 </div>
 
             </div>
-            <div class="right"><h1>this is the recipe</h1></div>
-            <div class="bottom"><h1>this is the bottom</h1></div>
+            <div class="right"><h1>this is the recipe</h1></div>  
+            <div class="bottom" id="bottom-cards">
+                <div class="info-card" style="display: none">
+                  <h2></h2>
+                  <img />
+                  <p></p>
+                </div>
+            </div>
         
     </div>
 </body>
