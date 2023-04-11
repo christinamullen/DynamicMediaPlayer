@@ -9,6 +9,7 @@
     --c-body: #FEE9C4;
     --c-text:#333;
     --c-green: #12362A;
+    --c-ltgreen: #98A685;
     --c-white: #fffeff;
 }
 
@@ -31,7 +32,6 @@ body {
 .container {
     margin: 25% auto;
     display: grid;
-    
     color: var(--c-white);
     width: 80%;
     height: calc(80% * (100vw / 100vh));
@@ -41,18 +41,47 @@ body {
     border-radius: 20px;
     text-align: center;
 }
-.top {
+h1 {
     font-family: var(--ff-h1);
 }
+h2 {
+    font-family: var(--ff-h2);
+    padding: 0 10% 0 10%;
+}
 video {
-    width: 300px;
-    height: 440px;
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    
 }
 .info-card {
-    border: 5px solid;
+    background-color: var(--c-ltgreen);
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    width: 40%;
+    
+    
+}
+.recipe-list {
+    text-align: left;
+    padding: 0 10% 0 10%;
+}
+form {
+    padding: 0 5% 0 5%;
+}
+#bottom-cards {
+    display:flex;
+    justify-content: space-evenly;
+    
+}
+ .right {
+    padding: 10%;
+ }
+.bottom {
+    padding: 0 5% 5% 5%;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1300px) {
     .container {
         justify-items: center;
         grid-template-columns: repeat(12, 1fr);
@@ -74,12 +103,13 @@ video {
         color: var(--c-white);
         grid-column: 7 / span 6;
         justify-items: center;
-        padding: 10%;
+        
         box-shadow: var(--shadow);
         
     }
     .bottom {
         grid-column: 1 / span 12;
         justify-items: center;
+        margin: 0 0 5% 0;
     }
 }

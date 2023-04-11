@@ -1,6 +1,6 @@
 const cards =[
 {
-    title: "Ingredients",
+    title: "INGREDIENTS",
     icon: {
         src: "imgs/fork_icon.png",
         alt: "croissant",
@@ -10,7 +10,7 @@ const cards =[
     },
 },
 {
-    title: "Time to Cook",
+    title: "TIME TO COOK",
     icon: {
         src: "imgs/timer.png",
         alt: "pepe",
@@ -29,7 +29,7 @@ cards.forEach((data) => {
     let card = document.createElement("DIV");
     card.classList.add("info-card");
     
-    card.innerHTML += `<h2>${data.title}<h2>`;
+    card.innerHTML += `<h1>${data.title}<h1>`;
     card.innerHTML += `<img src="${data.icon.src}" alt="${data.icon.alt}">`;
     card.innerHTML += `<p>${data.description.text}</p>`;
     

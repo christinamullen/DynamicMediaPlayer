@@ -16,60 +16,48 @@
     <div class="container">
             <div class="top">
                 <h1>ITALIAN STUFFED PEPPERS</h1>
-                <form id="vid_selection">
-                    <fieldset>
-                        <legend>Select your cook</legend>
-                        <select id="video_select">
-                            <option>Select ...</option>
-                            <option value="vids/NonnaPiasDeliciousStuffedpeppers.mp4">Alla Nonna Pia</option>
-                            <option value="vids/PasqualeStuffedPeppersRecipe.mp4">Alla Pasquale Sciarappa</option>
-                        </select>
-                    </fieldset>
-                </form>
-                <h2> alla Nonna Pia</h2>
+                <h2>My Grandmother was the best cook, but she never measured or used a cookbook. This was sometimes hard to follow and produced inconsistent results. Here I provide a traditional (yet precise) recipe for Stuffed Peppers. </h2>
+
             </div>
 
             <div class="left">
+
                 <video id="vid" width="300" controls>
-                    <source src="vids/NonnaPiasDeliciousStuffedpeppers.mp4" type="video/mp4">
+                    <source src="vids/PasqualeStuffedPeppersRecipe.mp4" type="video/mp4">
                     <source src="vids/NonnaPiasDeliciousStuffedpeppers.webm" type="video/webm">
-                    <track id="en" kind="captions" label="English (captions)" srclang="en" src="captions/NonnaPiasDeliciousStuffedpeppers.vtt" default>
+                    <track id="en" kind="captions" label="English (captions)" srclang="en" src="captions/PasqualeStuffedPeppersRecipe.vtt" default>
                 </video>
                 <div id="controls">
                     <form id="video_form">
                         <fieldset>
-                            <legend>Playback controls</legend>
-                            <input type="button" id="play_button" onclick="playVideo(vid)" value="Play" />
-                            <input type="button" id="pause_button" onclick="pauseVideo(vid)" value="Pause" />
-                            <input type="button" id="mute" onclick="muteVid(vid)" value="Mute" />
-                            <input type="button" id="unmute" onclick="unmuteVid(vid)" value="Unmute" />
-                            <fieldset>
-                                <legend>Playback speed</legend>
-                                <input type=button id="ff" onclick="playRate(vid,2)" value="ff >>" />
-                                <input type=button id="slo" onclick="playRate(vid,.5)" value="slow >" />
-                                <input type=button id="normal" onclick="playRate(vid,1)" value="normal >" />
-                            </fieldset>
-
-                        </fieldset>
-                        
-                        <fieldset>
-                            <legend>Select a caption/subtitle to read</legend>
-                            <select id="text-track">
-                                <option>Select a subtitle language...</option>
-                                <option value="it">Italiano</option>
-                                <option value="en">English caption</option>
-                            </select>
+                            <legend>Playback speed</legend>
+                            <input type=button id="ff" onclick="playRate(vid,2)" value="ff >>" />
+                            <input type=button id="slo" onclick="playRate(vid,.5)" value="slow >" />
+                            <input type=button id="normal" onclick="playRate(vid,1)" value="normal >" />
                         </fieldset>
 
                     </form>
                 </div>
 
             </div>
-            <div class="right"><h1>this is the recipe</h1></div>  
+            <div class="right"><h1>this is the recipe</h1>
+            <ol id="recipe-list"> 
+                <li>Preheat oven to 350 degrees F (175 degrees C). Spray a roasting pan (large enough to accommodate 8 pepper halves in a single layer) with cooking spray.</li>
+                <li>Combine the ground sirloin, Italian sausage, brown rice, Italian seasonings, salt, pepper, garlic, Parmesan cheese, egg, and 1/2 cup garlic and basil tomato sauce in a large bowl. Mix until combined.</li>
+                <li>Divide meat mixture evenly among the green pepper halves; press to compress slightly. Arrange halves in prepared pan. Spoon the remaining garlic and basil tomato sauce onto the tops of the meat and peppers. Cover with lid.</li>
+                <li>Bake until the peppers are soft and internal temperature of the meat reaches 165 degrees F, about 1 1/2 hours.</li>
+                <li>Remove from oven. Remove the lid and top each pepper with shredded cheese.</li>
+                <li>Turn oven to broil. Place peppers, uncovered under the broiler. Broil until the cheese is melted and bubbly, about 5 minutes. Sprinkle with parsley.</li>
+            </ol>
+        </div>  
+
+
+
+
+
             <div class="bottom" id="bottom-cards">
-                <h1> this is the bottom</h1>
                 <div class="info-card" style="display: none">
-                  <h2></h2>
+                  <h1></h1>
                   <img />
                   <p></p>
                 </div>
