@@ -29,8 +29,7 @@ body {
     box-shadow: var(--shadow);
 }
 .container {
-    margin: 0;
-    margin-top: 25%;
+    margin: 25% auto;
     display: grid;
     background-color: #FEE9C4;
     color: #333; 
