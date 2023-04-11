@@ -52,9 +52,24 @@ function init() {
             // and change the caption texts
             myCues.splice(0, myCues.length);
             selectTrack(null, vid, 'en-p');
+
+
+
+
+
+
+
+
+
+            
         }
         // finally, swap the video to play
         selectVid(e, vid);
+
+
+
+
+
     });
 
     // initialize video captions dropdown behavior
@@ -64,7 +79,7 @@ function init() {
     });
 
     // initialize text transcript display (english)
-    transcript_en.addEventListener(
+    /*transcript_en.addEventListener(
         "click",
         function (e) {
             e.preventDefault();
@@ -100,7 +115,7 @@ function init() {
                 e.target.innerHTML = "Show Transcript";
                 display.style.display = "none";
             }
-        });
+        });*/
 }
 
 function func1() {

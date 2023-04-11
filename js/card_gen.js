@@ -2,37 +2,36 @@ const cards =[
 {
     title: "Ingredients",
     icon: {
-        src: "",
-        alt: "",
+        src: "imgs/1croissant.jpg",
+        alt: "croissant",
     },
-    desription: {
+    description: {
         text: "4 Bell Peppers\n 1 lb ground beef \n 1 cup cooked rice",
     },
 },
 {
     title: "Time to Cook",
     icon: {
-        src:"",
-        alt:"",
+        src: "imgs/1croissant.jpg",
+        alt: "pepe",
     },
-    desription: {
+    description: {
         text: "Prep Time: 15min\n Cook Time: 1 hr 30 mins\n Total Time: 1 hr 45mins\n Servings: 4"
     },
 },
 ];
 
 const container = document.getElementById("bottom-cards");
-const template_card = document.getElementsByClassName("info-card")[0];
+//const template_card = document.getElementsByClassName("info-card")[0];
 
 cards.forEach((data) => {
-    const card = template_card.cloneNode(true);
-    card.style.display = "";
-    const header = card.children[0];
-    const image = card.children[1];
-    const description = card.children[2];
-    header.textContent = data.title;
-    image.src = data.icon.src;
-    image.alt = data.icon.alt;
-    description.textContent = data.description.text;
+    console.log(data.title);
+    let card = document.createElement("DIV");
+    card.classList.add("info-card");
+    
+    card.innerHTML += `<h2>${data.title}<h2>`;
+    card.innerHTML += `<img src="${data.icon.src}" alt="${data.icon.alt}">`;
+    card.innerHTML += `<p>${data.description.text}</p>`;
+    
     container.appendChild(card);
 });
