@@ -15,7 +15,7 @@
 body {
     margin: 3;
     padding: 5;
-    background-image: url("/imgs/tomatoesGarlic2.svg");
+    background-image: url("/imgs/tomatoesGarlic.svg");
     background-color: #12362A;
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,8 +31,8 @@ body {
 .container {
     margin: 25% auto;
     display: grid;
-    background-color: #FEE9C4;
-    color: #333; 
+    
+    color: var(--c-white);
     width: 80%;
     height: calc(80% * (100vw / 100vh));
     box-sizing: border-box;
@@ -64,7 +64,7 @@ video {
     
     }
     .left {
-        background-color: #FEE9C4;
+       
         grid-column: 1 / span 6;
         justify-items: center;
     

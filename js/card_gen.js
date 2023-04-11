@@ -2,7 +2,7 @@ const cards =[
 {
     title: "Ingredients",
     icon: {
-        src: "imgs/1croissant.jpg",
+        src: "imgs/fork_icon.png",
         alt: "croissant",
     },
     description: {
@@ -12,7 +12,7 @@ const cards =[
 {
     title: "Time to Cook",
     icon: {
-        src: "imgs/1croissant.jpg",
+        src: "imgs/timer.png",
         alt: "pepe",
     },
     description: {
