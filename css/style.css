@@ -5,7 +5,7 @@
     --ff-h1: 'Hammersmith One', sans-serif;
     --ff-h2: 'Playfair Display', serif;
 
-    --shadow: 0 0 1em rgba(0,0,0, .25);
+    --shadow: 0 0 1em rgba(0,0,0, .45);
     --c-body: #FEE9C4;
     --c-text:#333;
     --c-green: #12362A;
@@ -72,8 +72,21 @@ video {
 ol {
     text-align: left;
 }
-
-
+input[type=button] {
+    background-color: var(--c-ltgreen);
+    border: none;
+    color: var(--c-white);
+    padding: 8px 32px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+fieldset {
+    border: none;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+  }
 
 .recipe-list {
     text-align: left;
@@ -81,6 +94,7 @@ ol {
 }
 form {
     padding: 0 5% 0 5%;
+    border: none;
 }
 #bottom-cards {
     display:flex;
