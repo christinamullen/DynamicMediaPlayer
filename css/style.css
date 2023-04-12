@@ -47,6 +47,11 @@ h1 {
 h2 {
     font-family: var(--ff-h2);
     padding: 0 10% 0 10%;
+    font-size: large;
+}
+h3 {
+    font-family: var(--ff-h1);
+    font-size:large;
 }
 video {
     width: 80%;
@@ -55,13 +60,21 @@ video {
     
 }
 .info-card {
-    background-color: var(--c-ltgreen);
+    background-color: var(--c-green);
     box-shadow: var(--shadow);
     border-radius: 20px;
     width: 40%;
     
-    
 }
+.info-card > img{
+    height: 25%;
+}
+ol {
+    text-align: left;
+}
+
+
+
 .recipe-list {
     text-align: left;
     padding: 0 10% 0 10%;

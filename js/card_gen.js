@@ -2,7 +2,7 @@ const cards =[
 {
     title: "INGREDIENTS",
     icon: {
-        src: "imgs/fork_icon.png",
+        src: "imgs/garlic_piece.svg",
         alt: "croissant",
     },
     description: {
@@ -12,11 +12,12 @@ const cards =[
 {
     title: "TIME TO COOK",
     icon: {
-        src: "imgs/timer.png",
+        src: "imgs/tomatoes.svg",
         alt: "pepe",
     },
     description: {
-        text: "Prep Time: 15min\n Cook Time: 1 hr 30 mins\n Total Time: 1 hr 45mins\n Servings: 4"
+        text: "Prep Time: 15min\n Cook Time: 1 hr 30 mins\n Total Time: 1 hr 45mins\n Servings: 4", 
+        
     },
 },
 ];
@@ -29,7 +30,7 @@ cards.forEach((data) => {
     let card = document.createElement("DIV");
     card.classList.add("info-card");
     
-    card.innerHTML += `<h1>${data.title}<h1>`;
+    card.innerHTML += `<h3>${data.title}<h3>`;
     card.innerHTML += `<img src="${data.icon.src}" alt="${data.icon.alt}">`;
     card.innerHTML += `<p>${data.description.text}</p>`;
     
