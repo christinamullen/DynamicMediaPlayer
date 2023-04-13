@@ -25,52 +25,6 @@ function init() {
     const transcript_en = document.getElementById("transcript-en");
     const showHide = document.getElementById("show-hide");
 
-    // initialize video select dropdown behavior
-    selectVid.addEventListener("change", (e) => {
- 
-        // depending on which video is selected, change the cues
-        // and change the captions.
-        if (e.target.value == 'vids/NonnaPiasDeliciousStuffedpeppers.mp4') {
-            
-            // choose the english caption text
-            selectTrack(null, vid, 'en');
-
-            // reset the cues playlist
-            myCues = [
-                { seconds: 2, callback: func1 },
-                { seconds: 9, callback: func2 },
-                { seconds: 15, callback: func3 },
-                { seconds: 25, callback: func6 },
-                { seconds: 37, callback: func4 },
-                { seconds: 50, callback: func5 }
-            ];
-            // recreate the cue timer
-            cueTimer.setup("vid", myCues);
-
-        } else if(e.target.value == 'vids/PasqualeStuffedPeppersRecipe.mp4') {
-            // if bunny video, empty the myCues array
-            // and change the caption texts
-            myCues.splice(0, myCues.length);
-            selectTrack(null, vid, 'en-p');
-
-
-
-
-
-
-
-
-
-            
-        }
-        // finally, swap the video to play
-        selectVid(e, vid);
-
-
-
-
-
-    });
 
     // initialize video captions dropdown behavior
     selectTxt.addEventListener("change", (e) => {
