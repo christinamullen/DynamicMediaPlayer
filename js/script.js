@@ -4,74 +4,49 @@ document.addEventListener("DOMContentLoaded", init)
 var myCues;
 function init() {
 
-    // create a playlist of functions to call at certain moments in the video.
    myCues = [
-        { seconds: 2, callback: func1 },
-        { seconds: 9, callback: func2 },
-        { seconds: 15, callback: func3 },
-        { seconds: 25, callback: func6 },
-        { seconds: 37, callback: func4 },
+        { seconds: 5, callback: func1 },
+        { seconds: 10, callback: func2 },
+        { seconds: 20, callback: func3 },
+        { seconds: 30, callback: func6 },
+        { seconds: 40, callback: func4 },
         { seconds: 50, callback: func5 }
     ];
 
-    // setup the cuepoint timer
+    //cuepoint timer
     cueTimer.setup("vid", myCues);
 
-    // create shortcut variables
+    //shortcut variables
     const vid = document.querySelector("#vid");
-    const selectVid = document.querySelector("#video_select");
     const selectTxt = document.querySelector("#text-track");
-    const display = document.getElementById("transcript");
-    const transcript_en = document.getElementById("transcript-en");
+    
     const showHide = document.getElementById("show-hide");
 
+    const recipeList = document.getElementById("recipe-list");
+    const recipeListItems = recipeList.getElementsByTagName("li");
 
+    vid.addEventListener("timeupdate", function() {
+        for (let i = 0; i < recipeListItems.length; i++){
+            const start = parseFloat(recipeListItems[i].dataset.start);
+            const end = parseFloat(recipeListItems[i].dataset.end);
+            if(vid.currentTime >= start && vid.currentTime < end ){
+                recipeListItems.classList.add("highlight");
+            }
+            else{
+                recipeListItems.classList.remove("highlight");
+            }
+        }
+    });
+
+    //not using ************************
     // initialize video captions dropdown behavior
     selectTxt.addEventListener("change", (e) => {
         const id = e.target.value;
         selectTrack(e, vid, id);
     });
 
-    // initialize text transcript display (english)
-    /*transcript_en.addEventListener(
-        "click",
-        function (e) {
-            e.preventDefault();
-            webvttTranscript("captions/synergy.vtt", display);
-        });
-
-    // initialize text transcript display (Spanish)
-    transcript_es.addEventListener(
-        "click",
-        function (e) {
-            e.preventDefault();
-            webvttTranscript("subtitles/spanish.vtt", display);
-        });
-
-    // initialize text transcript display (French)
-    transcript_fr.addEventListener(
-        "click",
-        function (e) {
-            e.preventDefault();
-            webvttTranscript("subtitles/french.vtt", display);
-        });
-
-        
-    showHide.addEventListener(
-        "click",
-        function (e) {
-            e.preventDefault();
-            webvttTranscript("subtitles/french.vtt", display);
-            if (e.target.innerHTML == "Show Transcript") {
-                e.target.innerHTML = "Hide Transcript";
-                display.style.display = "block";
-            } else {
-                e.target.innerHTML = "Show Transcript";
-                display.style.display = "none";
-            }
-        });*/
 }
-
+//test 
 function func1() {
     document.querySelector("#vid").style = "outline : 10px solid red";
 }

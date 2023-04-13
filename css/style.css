@@ -107,6 +107,9 @@ form {
 .bottom {
     padding: 0 5% 5% 5%;
 }
+.highlight {
+    font-weight: bold;
+}
 
 @media screen and (min-width: 1300px) {
     .container {
