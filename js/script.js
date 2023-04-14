@@ -12,8 +12,9 @@ const ingrListItems = document.getElementsByTagName("li");
 function init() {
 
    myCues = [
-        { seconds: 0, callback: func2 },//recipe list 0
-        { seconds: 6, callback: func3 },//ingred list 0,
+        { seconds: 0, callback: func1 },//recipe list 0
+        { seconds: 6, callback: func2 },//ingred list 0,
+        { seconds: 7, callback: func3 },//ingred list 0,
         { seconds: 14, callback: func4 },//
         { seconds: 18, callback: func5 },
         { seconds: 23, callback: func6 },
@@ -23,9 +24,9 @@ function init() {
         { seconds: 36, callback: funcA },
         { seconds: 38, callback: funcB },
 
-        { seconds: 45, callback: funcC },
-        { seconds: 50, callback: funcC },
-        { seconds: 50, callback: funcC },
+        { seconds: 40, callback: funcC },
+        { seconds: 69, callback: funcD },
+        { seDonds: 50, callback: funcC },
         { seconds: 50, callback: funcC },
         { seconds: 50, callback: funcC },
         { seconds: 50, callback: funcC },
@@ -42,17 +43,23 @@ function init() {
 }
 //test 
 function func1() {
-    document.querySelector("#vid").style = "outline : 10px solid red";
+    let pop = document.querySelector(".pop");
+    pop.innerHTML = "<p>Start by setting the oven temp and gathering our ingredients</p>";
+    document.querySelector(".pop").classList.toggle("hide");
+    recipeListItems[0].classList.add("highlight");
+    setTimeout(() => {
+        recipeListItems[0].classList.remove("highlight");
+    }, 5000);
     
 }
 
 function func2() {
-    let pop = document.querySelector(".pop");
-    pop.innerHTML = "<p>Gather Ingredient:</p>";
-    document.querySelector(".pop").classList.toggle("hide");
+    
+    recipeListItems[1].classList.add("highlight");
     setTimeout(() => {
         document.querySelector(".pop").classList.toggle("hide");
-    }, 1000);
+        recipeListItems[1].classList.remove("highlight");
+    }, 5000);
 }
 
 function func3() {
@@ -66,10 +73,11 @@ function func3() {
     let pop = document.querySelector(".pop");
     pop.innerHTML = aListItem;
     ingrListItems[0].classList.add("highlight");
-    recipeListItems[1].classList.add("highlight");
+    recipeListItems[2].classList.add("highlight");
     setTimeout(() => {
         document.querySelector(".pop").classList.toggle("hide");
         ingrListItems[0].classList.remove("highlight");
+        recipeListItems[2].classList.remove("highlight");
     }, 7000);
     
 }
@@ -131,8 +139,35 @@ function funcB() {
 }
 //
 function funcC() {
-    ingrListItems[8].classList.add("highlight");
+    ingrListItems[11].classList.add("highlight");
+    ingrListItems[6].classList.add("highlight");
+    ingrListItems[7].classList.add("highlight");
+    recipeListItems[3].classList.add("highlight");
     setTimeout(() => {
-        ingrListItems[8].classList.remove("highlight");
-    }, 2000);
+        ingrListItems[11].classList.remove("highlight");
+    }, 16000);
+}
+function funcC() {
+    ingrListItems[11].classList.add("highlight");
+    ingrListItems[6].classList.add("highlight");
+    ingrListItems[7].classList.add("highlight");
+    recipeListItems[3].classList.add("highlight");
+    setTimeout(() => {
+        ingrListItems[11].classList.remove("highlight");
+    }, 16000);
+}
+function funcC() {
+    ingrListItems[11].classList.add("highlight");
+    ingrListItems[6].classList.add("highlight");
+    ingrListItems[7].classList.add("highlight");
+    ingrListItems[3].classList.add("highlight");
+    ingrListItems[1].classList.add("highlight");
+    ingrListItems[5].classList.add("highlight");
+    ingrListItems[8].classList.add("highlight");
+    ingrListItems[9].classList.add("highlight");
+    ingrListItems[10].classList.add("highlight");
+    recipeListItems[4].classList.add("highlight");
+    setTimeout(() => {
+        ingrListItems[11].classList.remove("highlight");
+    }, 16000);
 }
