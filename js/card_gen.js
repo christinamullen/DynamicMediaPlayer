@@ -6,7 +6,7 @@ const cards =[
         alt: "croissant",
     },
     description: {
-        text: "<ol class='ingredients'><li>1.5 lbs. pork shoulder, ground</li><li>8 red bell peppers, seeds removed and blanched</li><li>1 cup arborio rice, cooked</li><li>1 small sweet onion, minced</li><li>1 cup pecorino cheese, shredded</li><li>32 oz. tomato sauce</li><li>3-4 garlic cloves, minced</li><li>handful of parsley, chopped</li><li>1 Tbsp. marjoram</li><li>salt, to taste</li><li>black pepper, to taste</li><li>olive oil, for frying</li></ol>",
+        text: "<ol class='ingredients'><li>8 red bell peppers, seeds removed and blanched</li><li>1 cup pecorino cheese, shredded</li><li>1 cup arborio rice, cooked</li><li>1.5 lbs. pork shoulder, ground</li><li>32 oz. tomato sauce</li><li>1 Tbsp. marjoram</li><li>1 small sweet onion, minced</li><li>3-4 garlic cloves, minced</li><li>handful of parsley, chopped</li><li>salt, to taste</li><li>black pepper, to taste</li><li>olive oil, for frying</li></ol>",
     },
 },
 {
@@ -36,3 +36,4 @@ cards.forEach((data) => {
     
     container.appendChild(card);
 });
+export { cards };

@@ -109,6 +109,7 @@ form {
 }
 .highlight {
     font-weight: bold;
+    color:#C73E21;
 }
 .ingredients {
     list-style-type: square;
