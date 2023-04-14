@@ -1,3 +1,4 @@
+
 const cards =[
 {
     title: "INGREDIENTS",
@@ -22,6 +23,7 @@ const cards =[
 },
 ];
 
+
 const container = document.getElementById("bottom-cards");
 
 
@@ -36,4 +38,5 @@ cards.forEach((data) => {
     
     container.appendChild(card);
 });
+
 export { cards };

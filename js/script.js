@@ -1,5 +1,5 @@
-import { cueTimer } from "./modules/cues.js";
-import { cards } from "./card_gen.js";
+import { cueTimer } from './modules/cues.js';
+import {cards} from './card_gen.js';
 
 document.addEventListener("DOMContentLoaded", init)
 var myCues;
@@ -25,8 +25,8 @@ function init() {
         { seconds: 38, callback: funcB },
 
         { seconds: 40, callback: funcC },
-        { seconds: 69, callback: funcD },
-        { seDonds: 50, callback: funcC },
+        { seconds: 66, callback: funcD },
+        { seDonds: 133, callback: funcE },
         { seconds: 50, callback: funcC },
         { seconds: 50, callback: funcC },
         { seconds: 50, callback: funcC },
@@ -145,18 +145,11 @@ function funcC() {
     recipeListItems[3].classList.add("highlight");
     setTimeout(() => {
         ingrListItems[11].classList.remove("highlight");
+        recipeListItems[3].classList.remove("highlight");
     }, 16000);
 }
-function funcC() {
-    ingrListItems[11].classList.add("highlight");
-    ingrListItems[6].classList.add("highlight");
-    ingrListItems[7].classList.add("highlight");
-    recipeListItems[3].classList.add("highlight");
-    setTimeout(() => {
-        ingrListItems[11].classList.remove("highlight");
-    }, 16000);
-}
-function funcC() {
+
+function funcD() {
     ingrListItems[11].classList.add("highlight");
     ingrListItems[6].classList.add("highlight");
     ingrListItems[7].classList.add("highlight");
@@ -171,3 +164,21 @@ function funcC() {
         ingrListItems[11].classList.remove("highlight");
     }, 16000);
 }
+function funcE() {
+    ingrListItems[11].classList.add("highlight");
+    ingrListItems[6].classList.add("highlight");
+    ingrListItems[7].classList.add("highlight");
+    ingrListItems[3].classList.add("highlight");
+    ingrListItems[2].classList.add("highlight");
+    ingrListItems[1].classList.add("highlight");
+    ingrListItems[4].classList.add("highlight");
+    ingrListItems[5].classList.add("highlight");
+    ingrListItems[8].classList.add("highlight");
+    ingrListItems[9].classList.add("highlight");
+    ingrListItems[10].classList.add("highlight");
+    recipeListItems[4].classList.add("highlight");
+    setTimeout(() => {
+        ingrListItems[11].classList.remove("highlight");
+    }, 16000);
+}
+
