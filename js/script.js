@@ -12,12 +12,24 @@ const ingrListItems = document.getElementsByTagName("li");
 function init() {
 
    myCues = [
-        { seconds: 1, callback: func1 },
-        { seconds: 2, callback: func2 },
-        { seconds: 5, callback: func3 },
-        { seconds: 6, callback: func4 },
-        { seconds: 40, callback: func4 },
-        { seconds: 50, callback: func5 }
+        { seconds: 0, callback: func2 },//recipe list 0
+        { seconds: 6, callback: func3 },//ingred list 0,
+        { seconds: 14, callback: func4 },//
+        { seconds: 18, callback: func5 },
+        { seconds: 23, callback: func6 },
+        { seconds: 28, callback: func7 },
+        { seconds: 30, callback: func8 },
+        { seconds: 33, callback: func9 },
+        { seconds: 36, callback: funcA },
+        { seconds: 38, callback: funcB },
+
+        { seconds: 45, callback: funcC },
+        { seconds: 50, callback: funcC },
+        { seconds: 50, callback: funcC },
+        { seconds: 50, callback: funcC },
+        { seconds: 50, callback: funcC },
+        { seconds: 50, callback: funcC },
+        { seconds: 50, callback: funcC }
     ];
     //cuepoint timer
     cueTimer.setup("vid", myCues);
@@ -27,19 +39,6 @@ function init() {
     const selectTxt = document.querySelector("#text-track");
     const showHide = document.getElementById("show-hide");
 
-/*
-    vid.addEventListener("timeupdate", function() {
-        for (let i = 0; i < recipeListItems.length; i++){
-            const start = parseFloat(recipeListItems[i].dataset.start);
-            const end = parseFloat(recipeListItems[i].dataset.end);
-            if(vid.currentTime >= start && vid.currentTime < end ){
-                recipeListItems.classList.add("highlight");
-            }
-            else{
-                recipeListItems.classList.remove("highlight");
-            }
-        }
-    });*/
 }
 //test 
 function func1() {
@@ -71,23 +70,69 @@ function func3() {
     setTimeout(() => {
         document.querySelector(".pop").classList.toggle("hide");
         ingrListItems[0].classList.remove("highlight");
-    }, 5000);
+    }, 7000);
     
 }
-
+//cheese
 function func4() {
     ingrListItems[1].classList.add("highlight");
     setTimeout(() => {
         ingrListItems[1].classList.remove("highlight");
-    }, 5000);
+    }, 3000);
 }
-
+//rice
 function func5() {
     ingrListItems[2].classList.add("highlight");
     setTimeout(() => {
         ingrListItems[2].classList.remove("highlight");
+    }, 4000);
+}
+//pork
+function func6() {
+    ingrListItems[3].classList.add("highlight");
+    setTimeout(() => {
+        ingrListItems[3].classList.remove("highlight");
     }, 5000);
 }
-
-function func6() {
+//sauce
+function func7() {
+    ingrListItems[4].classList.add("highlight");
+    setTimeout(() => {
+        ingrListItems[4].classList.remove("highlight");
+    }, 1000);
+}
+//marj
+function func8() {
+    ingrListItems[5].classList.add("highlight");
+    setTimeout(() => {
+        ingrListItems[5].classList.remove("highlight");
+    }, 2000);
+}
+//garlic
+function func9() {
+    ingrListItems[6].classList.add("highlight");
+    setTimeout(() => {
+        ingrListItems[6].classList.remove("highlight");
+    }, 2000);
+}
+//onion
+function funcA() {
+    ingrListItems[7].classList.add("highlight");
+    setTimeout(() => {
+        ingrListItems[7].classList.remove("highlight");
+    }, 1000);
+}
+//parsley
+function funcB() {
+    ingrListItems[8].classList.add("highlight");
+    setTimeout(() => {
+        ingrListItems[8].classList.remove("highlight");
+    }, 2000);
+}
+//
+function funcC() {
+    ingrListItems[8].classList.add("highlight");
+    setTimeout(() => {
+        ingrListItems[8].classList.remove("highlight");
+    }, 2000);
 }
