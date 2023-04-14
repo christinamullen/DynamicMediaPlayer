@@ -25,6 +25,9 @@ function init() {
     const recipeList = document.getElementById("recipe-list");
     const recipeListItems = recipeList.getElementsByTagName("li");
 
+    const ingredientList = document.getElementsByClassName("ingredients");
+    const ingrListItems = document.getElementsByTagName("li");
+
     vid.addEventListener("timeupdate", function() {
         for (let i = 0; i < recipeListItems.length; i++){
             const start = parseFloat(recipeListItems[i].dataset.start);
@@ -38,17 +41,16 @@ function init() {
         }
     });
 
-    //not using ************************
-    // initialize video captions dropdown behavior
-    selectTxt.addEventListener("change", (e) => {
-        const id = e.target.value;
-        selectTrack(e, vid, id);
-    });
-
 }
 //test 
 function func1() {
     document.querySelector("#vid").style = "outline : 10px solid red";
+    let pop = document.querySelector(".pop");
+    pop.innerHTML = "<p>Gather your ingredients from the list above</p>";
+    document.querySelector(".pop").classList.toggle("hide");
+    setTimeout(() => {
+        document.querySelector(".pop").classList.toggle("hide");
+    }, 1000);
 }
 
 function func2() {
@@ -62,26 +64,15 @@ function func2() {
 
 function func3() {
     const pop = document.querySelector(".pop");
-    pop.innerHTML = "<p>E=MC<sup>2</sup> is NOT Statistical Data!!</p>";
-    pop.classList.toggle("hide");
-    setTimeout(() => {
-        document.querySelector(".pop").classList.toggle("hide");
-    }, 2000);
-    document.querySelector("#vid").style = "outline: 0px solid red";
-    document.querySelector("#web").src =
-        "https://en.wikipedia.org/wiki/Albert_Einstein";
+    
 }
 
 function func4() {
-    document.querySelector("#web").src =
-        "https://en.wikipedia.org/wiki/Paradigm_shift";
+    
 }
 
 function func5() {
-    document.querySelector("#web").src =
-        "https://en.wikipedia.org/wiki/Domestic_violence";
 }
 
 function func6() {
-    document.querySelector("#web").src = "images/koljr-banana-splits-400.jpg";
 }
