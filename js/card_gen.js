@@ -6,24 +6,24 @@ const cards =[
         alt: "croissant",
     },
     description: {
-        text: "4 Bell Peppers\n 1 lb ground beef \n 1 cup cooked rice",
+        text: "<ol class='ingredients'><li>1.5 lbs. pork shoulder, ground</li><li>8 red bell peppers, seeds removed and blanched</li><li>1 cup arborio rice, cooked</li><li>1 small sweet onion, minced</li><li>1 cup pecorino cheese, shredded</li><li>32 oz. tomato sauce</li><li>3-4 garlic cloves, minced</li><li>handful of parsley, chopped</li><li>1 Tbsp. marjoram</li><li>salt, to taste</li><li>black pepper, to taste</li><li>olive oil, for frying</li></ol>",
     },
 },
 {
     title: "TIME TO COOK",
     icon: {
         src: "imgs/tomatoes.svg",
-        alt: "pepe",
+        alt: "Tomatoes",
     },
     description: {
-        text: "Prep Time: 15min\n Cook Time: 1 hr 30 mins\n Total Time: 1 hr 45mins\n Servings: 4", 
+        text: "<ol class='prepTime'><li>Prep Time: 15min</li> <li>Cook Time: 1 hr 30 mins</li> <li>Total Time: 1 hr 45mins</li> <li>Servings: 4</li></ol>", 
         
     },
 },
 ];
 
 const container = document.getElementById("bottom-cards");
-//const template_card = document.getElementsByClassName("info-card")[0];
+
 
 cards.forEach((data) => {
     console.log(data.title);
@@ -32,7 +32,7 @@ cards.forEach((data) => {
     
     card.innerHTML += `<h3>${data.title}<h3>`;
     card.innerHTML += `<img src="${data.icon.src}" alt="${data.icon.alt}">`;
-    card.innerHTML += `<p>${data.description.text}</p>`;
+    card.innerHTML += `<p class="description">${data.description.text}</p>`;
     
     container.appendChild(card);
 });
