@@ -30,13 +30,12 @@ body {
     box-shadow: var(--shadow);
 }
 .container {
-    margin: 25% auto;
+    margin: 25% auto auto auto;
     display: grid;
     color: var(--c-white);
     width: 80%;
     box-sizing: border-box;
     place-items: center;
-    
     border-radius: 20px;
     text-align: center;
 }
@@ -119,6 +118,10 @@ form {
 .prepTime {
     list-style-type: none;
     padding-left: 15%;
+}
+footer {
+    text-align: center;
+    color: var(--c-white)
 }
 
 @media screen and (min-width: 1300px) {
