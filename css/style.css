@@ -15,7 +15,7 @@
 body {
     margin: 3;
     padding: 5;
-    background-image: url("/imgs/tomatoesGarlic.svg");
+    background-image: url("imgs/tomatoesGarlic.svg");
     background-color: #12362A;
     background-size: cover;
     background-repeat: no-repeat;
