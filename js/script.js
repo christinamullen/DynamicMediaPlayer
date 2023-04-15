@@ -6,7 +6,7 @@ var myCues;
 const recipeList = document.getElementById("recipe-list");
 const recipeListItems = recipeList.getElementsByTagName("li");
 
-const ingredientList = document.getElementsByClassName("ingredients");
+//const ingredientList = document.getElementsByClassName("ingredients");
 const ingrListItems = document.getElementsByTagName("li");
 
 function init() {
@@ -15,7 +15,7 @@ function init() {
         { seconds: 0, callback: func1 },//recipe list 0
         { seconds: 6, callback: func2 },//ingred list 0,
         { seconds: 7, callback: func3 },//ingred list 0,
-        { seconds: 14, callback: func4 },//
+        { seconds: 14, callback: func4 },
         { seconds: 18, callback: func5 },
         { seconds: 23, callback: func6 },
         { seconds: 28, callback: func7 },
@@ -36,14 +36,8 @@ function init() {
     ];
     //cuepoint timer
     cueTimer.setup("vid", myCues);
-
-    //shortcut variables
-    const vid = document.querySelector("#vid");
-    const selectTxt = document.querySelector("#text-track");
-    const showHide = document.getElementById("show-hide");
-
 }
-//test 
+
 function func1() {
     let pop = document.querySelector(".pop");
     pop.innerHTML = "<p>First, set the oven temp and gathering your ingredients</p>";
@@ -66,7 +60,7 @@ function func2() {
 
 function func3() {
     //show peppers
-    //highlight instructions #2
+    //highlight instructions #2 decided this looked weird
     /*convert text string into DOM element
     const range = document.createRange();
     const htmlFragment = range.createContextualFragment(cards[0].description.text);
