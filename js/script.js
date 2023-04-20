@@ -1,5 +1,5 @@
 import { cueTimer } from './modules/cues.js';
-import {cards} from './card_gen.js';
+//import {cards} from './card_gen.js';
 
 document.addEventListener("DOMContentLoaded", init)
 var myCues;

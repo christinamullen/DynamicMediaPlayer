@@ -39,4 +39,4 @@ cards.forEach((data) => {
     container.appendChild(card);
 });
 
-export { cards };
+
